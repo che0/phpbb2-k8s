@@ -1,5 +1,5 @@
 <?php
-$dbms = 'mysql';
+$dbms = 'mysql4';
 $dbhost = getenv('PHPBB_DB_HOST');
 $dbname = getenv('PHPBB_DB_NAME');
 $dbuser = getenv('PHPBB_DB_USER');
