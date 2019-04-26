@@ -28,5 +28,3 @@ EXPOSE 80
 
 ADD entrypoint.sh /entrypoint.sh
 CMD ["/entrypoint.sh"]
-
-
