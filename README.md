@@ -10,3 +10,4 @@ The container is configured via following environment variables:
 * `PHPBB_DB_USER`, `PHPBB_DB_PASSWORD` – database login
 * `PHPBB_SERVER_NAME`, `PHPBB_SERVER_PORT` – server name and port for internal redirects
 * `PHPBB_USE_HTTPS` – set to `1` to use https in internal redirect and cookies, otherwise set `0`
+* `PHPBB_X_FORWARDED_FOR_INDEX` – set to parse user IP from X-Forwarded-For; use -1 for last element, -2 for second-to-last (as you get for GCP load balancers); this is necessary for proper session processing, as phpBB restricts session to /24 ranges

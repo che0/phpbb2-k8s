@@ -17,9 +17,10 @@ ADD apache2.conf /etc/apache2/apache2.conf
 # fake sendmail for phpBB
 RUN ln -s /bin/true /usr/sbin/sendmail
 
-# install phpBB with our special config
+# install phpBB with our special config and patches
 ADD --chown=www-data:www-data phpBB-2.0.23.tar.gz /var/www/
 ADD --chown=www-data:www-data config.php /var/www/phpBB2/
+ADD patched-common.php /var/www/phpBB2/common.php
 
 # custom script for install / initial setup
 ADD setup.php /setup.php
