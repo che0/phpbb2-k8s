@@ -2,8 +2,9 @@ FROM debian:jessie
 
 LABEL maintainer="petr.novak2@firma.seznam.cz"
 
-RUN apt-get update \
-    && apt-get install -y \
+RUN sed -i '/^deb/d;/snapshot/s/^# //' /etc/apt/sources.list \
+    && apt-get update \
+    && apt-get install -y --allow-unauthenticated \
         apache2 \
         libapache2-mod-php5 \
         php5-mysql \
